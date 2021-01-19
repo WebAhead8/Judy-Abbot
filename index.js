@@ -1,5 +1,5 @@
 
-const list = [{todo: "drink Coffe"}, {todo: "shower"}, {todo: "drink cola"}, {todo: "eat vegtables"}, {todo: "read book"}]
+const list = [{todo: "drink Coffe", id:}, {todo: "shower"}, {todo: "drink cola"}, {todo: "eat vegtables"}, {todo: "read book"}]
 
 function addNewMission (){
     pass
