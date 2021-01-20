@@ -18,6 +18,6 @@ Team Work
 -
 Alaadin\
 Khaled Badarna\
-mhmod
-[TEXT TO SHOW](actual URL to navigate)
+mhmod\
+
 [Try our App](https://webahead8.github.io/TDD-ToDoDo-List/)
