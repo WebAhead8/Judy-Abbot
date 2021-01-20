@@ -56,8 +56,13 @@ function addNewMission (toDo, id, done, trash) {
     return
   }
 
-  const DONE = done ? CHECK : UNCHECK
-  const LINE = done ? LINE_THROUGH : ''
+    if (done) {
+    var DONE = CHECK;
+    var LINE = LINE_THROUGH;
+  } else {
+    DONE = UNCHECK;
+    LINE = "";
+  }
 
   const item = `<li class="item">
     <i class="fa ${DONE} co" job="complete" id="${id}"></i>
