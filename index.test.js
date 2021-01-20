@@ -1,5 +1,5 @@
 test("check if the push to the list is working", (t) => {
-  //   function simulate the enter pressing action
+  //   function simulates the enter pressing action
   input.value = "a";
   const ke = new KeyboardEvent("keypress", {
     bubbles: true,
@@ -13,7 +13,7 @@ test("check if the push to the list is working", (t) => {
 });
 
 test("check if the push to the list is working", (t) => {
-  //   function stamiulate enter pressing to save the input.value
+   //   function simulates the enter pressing action
   input.value = "aaa";
   const ke = new KeyboardEvent("keypress", {
     bubbles: true,
