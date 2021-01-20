@@ -20,4 +20,4 @@ Team Work
 - Khaled Badarna
 - mhmod
 
-[Try our App](https://webahead8.github.io/TDD-ToDoDo-List/)
+[Try our App](https://webahead8.github.io/Judy-Abbot/)
