@@ -16,8 +16,8 @@ How to use ?
 
 Team Work
 -
-- Alaadin\
-- Khaled Badarna\
+- Alaadin
+- Khaled Badarna
 - mhmod
 
 [Try our App](https://webahead8.github.io/TDD-ToDoDo-List/)
