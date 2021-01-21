@@ -3,7 +3,6 @@ const clear = document.querySelector(".clear");
 const dateElement = document.getElementById("date");
 const list = document.getElementById("list");
 const input = document.getElementById("input");
-
 // Variables
 let LIST = [],
   id = 0;
@@ -44,10 +43,26 @@ clear.addEventListener("click", function () {
 // Show todays date
 const options = { weekday: "long", month: "short", day: "numeric" };
 const today = new Date();
-
 dateElement.innerHTML = today.toLocaleDateString("en-US", options);
 
-//const list = [{todo: "drink Coffe", id:}, {todo: "shower"}, {todo: "drink cola"}, {todo: "eat vegtables"}, {todo: "read book"}]
+// add an item to the list with the enter key
+document.addEventListener("keypress", function (event) {
+  if (event.key === "Enter") {
+    const toDo = input.value;
+    // checks if the input isn't empty--->
+    if (!toDo) {
+      alert("you can't add an emty inpute");
+    } else if (toDo.length > 20) {
+      alert("You can't write more than 20 letter");
+    } else if (0 < toDo.length < 20) {
+      addNewMission(toDo, id); // send the input to the add function to add the job to the frontend(for the user)
+      LIST.push({ name: toDo, id: id, done: false, trash: false }); //add the job info to the array list in  the backend(for the devloper)
+      id++; //increase the id by one every time there is a new job
+    }
+
+    input.value = "";
+  }
+});
 
 // Adding Todo to the list :------->
 function addNewMission(toDo, id, done, trash) {
@@ -74,25 +89,6 @@ function addNewMission(toDo, id, done, trash) {
 
   list.insertAdjacentHTML("beforeend", item); //add new element at the end of the list in the html page ul
 }
-
-// add an item to the list with the enter key
-document.addEventListener("keypress", function (event) {
-  if (event.key === "Enter") {
-    const toDo = input.value;
-    // checks if the input isn't empty--->
-
-    if (toDo) {
-      addNewMission(toDo, id); // send the input to the add function to add the job to the frontend(for the user)
-      LIST.push({ name: toDo, id: id, done: false, trash: false }); //add the job info to the array list in  the backend(for the devloper)
-      id++; //increase the id by one every time there is a new job
-    }
-    input.value = "";
-  }
-});
-
-// function editMission(){
-//     pass
-// }
 
 function deleteMission(element) {
   element.parentNode.parentNode.removeChild(element.parentNode);
