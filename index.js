@@ -51,9 +51,6 @@ dateElement.innerHTML = today.toLocaleDateString("en-US", options);
 // Adding Todo to the list :------->
 function addNewMission(toDo, id, done, trash) {
   // if the toDo is in the trash, don't allow the user from add it again!
-  if (trash) {
-    return;
-  }
 
   if (done) {
     var DONE = CHECK;
@@ -119,7 +116,7 @@ function checkMission(element) {
 function editMission(element) {
   let num = element.id;
   const index = LIST.findIndex((text) => text.id == num);
-  document.getElementsByClassName("edit")[num].style.display = "flex";
+  document.getElementsByClassName("edit")[index].style.display = "flex";
 }
 // save to do
 function saveMission(element) {
