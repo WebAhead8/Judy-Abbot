@@ -50,7 +50,7 @@ dateElement.innerHTML = today.toLocaleDateString("en-US", options);
 
 // Adding Todo to the list :------->
 function addNewMission(toDo, id, done, trash) {
-  // if the toDo is in the trash, don't allow the user from add it again!
+  // if i delete this trash nothing will change, also in the function ! ? 
   if (trash) {
     return;
   }
