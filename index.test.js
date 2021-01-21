@@ -48,7 +48,7 @@ test("delete function check", (t) => {
   const listLength = document.getElementById("list").childElementCount;
   const expected = 0;
   t.equal(listLength, expected);
-  list.innerHTML = "";
-  LIST = [];
-  id = 0;
+  // list.innerHTML = "";
+  // LIST = [];
+  // id = 0;
 });

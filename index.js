@@ -5,7 +5,8 @@ const list = document.getElementById("list");
 const input = document.getElementById("input");
 
 // Variables
-var LIST, id;
+let LIST = [],
+  id = 0;
 
 //classes names
 const CHECK = "fa-check-circle";
@@ -96,7 +97,7 @@ document.addEventListener("keypress", function (event) {
 function deleteMission(element) {
   element.parentNode.parentNode.removeChild(element.parentNode);
 
-  let id = element.id;
+  const id = element.id;
   for (let i = 0; i < LIST.length; i++) {
     if (LIST[i].id == id) {
       LIST.splice(i, 1);
@@ -114,16 +115,16 @@ function checkMission(element) {
 
 // edit to do
 function editMission(element) {
-  let num = element.id;
+  const num = element.id;
   const index = LIST.findIndex((text) => text.id == num);
   document.getElementsByClassName("edit")[index].style.display = "flex";
 }
 // save to do
 function saveMission(element) {
-  let num1 = element.id;
+  const num1 = element.id;
   const index1 = LIST.findIndex((text) => text.id == num1);
-  let oldInputValue = document.getElementsByClassName("text")[index1];
-  let newInputValue = element.previousSibling.previousSibling;
+  const oldInputValue = document.getElementsByClassName("text")[index1];
+  const newInputValue = element.previousSibling.previousSibling;
   oldInputValue.textContent = newInputValue.value;
   LIST[index1].name = newInputValue.value;
   newInputValue.value = "";
