@@ -60,9 +60,9 @@ function addNewMission(toDo, id, done, trash) {
     LINE = "";
   }
 
-  const item = `<li class="item">
+  const item = `<li class="item" job=" do nothing">
     <i class="fa ${DONE} co" job="complete" id="${id}"></i>
-    <p id="${id}" class="text ${LINE}">${toDo}</p>
+    <p id="${id}" class="text ${LINE}" job="do nothing">${toDo}</p>
     <div class="edit" id="edit">
     <input type="item" id="${id}" placeholder="edit to-do" ></input>
     <i class="fa fa-save deee" job="save" id="${id}"></i>

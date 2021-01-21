@@ -11,19 +11,6 @@ test("check if the push (enter) is working ", (t) => {
   t.equal(LIST[0].name, "a");
 });
 
-test("check if the push (enter) is working ", (t) => {
-  //   function stamiulate enter pressing to save the input.value
-  input.value = "aaa";
-  const ke = new KeyboardEvent("keypress", {
-    bubbles: true,
-    cancelable: true,
-    key: "Enter",
-  });
-  input.dispatchEvent(ke);
-  //   addNewMission(toDo);
-  t.equal(LIST[1].name, "aaa");
-});
-
 test("check if check function works", (t) => {
   const mission = document.querySelector(".item i");
   mission.click();
@@ -59,7 +46,7 @@ test("delete function check", (t) => {
   const deletebutton = document.querySelector(".item").childNodes[9];
   deletebutton.click();
   const listLength = document.getElementById("list").childElementCount;
-  const expected = 1;
+  const expected = 0;
   t.equal(listLength, expected);
   list.innerHTML = "";
   LIST = [];
