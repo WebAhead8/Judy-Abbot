@@ -99,7 +99,13 @@ document.addEventListener("keypress", function (event) {
 function deleteMission(element) {
   element.parentNode.parentNode.removeChild(element.parentNode);
 
-  LIST[element.id].trash = true;
+  let id = element.id;
+  for (let i = 0; i < LIST.length; i++) {
+    if (LIST[i].id == id) {
+      LIST.splice(i, 1);
+      break;
+    }
+  }
 }
 
 function checkMission(element) {
@@ -113,7 +119,7 @@ function checkMission(element) {
 function editMission(element) {
   let num = element.id;
   const index = LIST.findIndex((text) => text.id == num);
-  document.getElementsByClassName("edit")[index].style.display = "flex";
+  document.getElementsByClassName("edit")[num].style.display = "flex";
 }
 // save to do
 function saveMission(element) {

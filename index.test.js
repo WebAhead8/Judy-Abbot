@@ -54,3 +54,14 @@ test("check if save function works", (t) => {
   const expected = "9899";
   t.equal(LIST[0].name, expected);
 });
+
+test("delete function check", (t) => {
+  const deletebutton = document.querySelector(".item").childNodes[9];
+  deletebutton.click();
+  const listLength = document.getElementById("list").childElementCount;
+  const expected = 1;
+  t.equal(listLength, expected);
+  list.innerHTML = "";
+  LIST = [];
+  id = 0;
+});
