@@ -50,7 +50,7 @@ dateElement.innerHTML = today.toLocaleDateString("en-US", options);
 
 // Adding Todo to the list :------->
 function addNewMission(toDo, id, done, trash) {
-  // if i delete this trash nothing will change, also in the function ! ?
+  // if the toDo is in the trash, don't allow the user from add it again!
   if (trash) {
     return;
   }
@@ -63,9 +63,9 @@ function addNewMission(toDo, id, done, trash) {
     LINE = "";
   }
 
-  const item = `<li class="item" job="do nothing">
+  const item = `<li class="item">
     <i class="fa ${DONE} co" job="complete" id="${id}"></i>
-    <p id="${id}" class="text ${LINE}" job="do nothing">${toDo}</p>
+    <p id="${id}" class="text ${LINE}">${toDo}</p>
     <div class="edit" id="edit">
     <input type="item" id="${id}" placeholder="edit to-do" ></input>
     <i class="fa fa-save deee" job="save" id="${id}"></i>

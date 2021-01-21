@@ -1,5 +1,5 @@
-test("check if the push to the list is working", (t) => {
-  //   function simulates the enter pressing action
+test("check if the push (enter) is working ", (t) => {
+  //   function stamiulate enter pressing to save the input.value
   input.value = "a";
   const ke = new KeyboardEvent("keypress", {
     bubbles: true,
@@ -8,12 +8,11 @@ test("check if the push to the list is working", (t) => {
   });
   input.dispatchEvent(ke);
   //   addNewMission(toDo);
-  t.equal(LIST[0].name, "a");//check if the value added by the input, is the same as in the list, if yes, then th test passed
-
+  t.equal(LIST[0].name, "a");
 });
 
-test("check if the push to the list is working", (t) => {
-   //   function simulates the enter pressing action
+test("check if the push (enter) is working ", (t) => {
+  //   function stamiulate enter pressing to save the input.value
   input.value = "aaa";
   const ke = new KeyboardEvent("keypress", {
     bubbles: true,
